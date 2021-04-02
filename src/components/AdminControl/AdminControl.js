@@ -18,7 +18,7 @@ const AdminControl = () => {
         
         console.log(newBook);
 
-        fetch('http://localhost:5055/addBook',{
+        fetch('https://powerful-sea-70900.herokuapp.com/addBook',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newBook)

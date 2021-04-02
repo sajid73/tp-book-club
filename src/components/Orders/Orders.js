@@ -13,7 +13,7 @@ const Orders = () => {
     // }
 
     useEffect(() => {
-        fetch('http://localhost:5055/addbookuser?email=' + loggedUser.email)
+        fetch('https://powerful-sea-70900.herokuapp.com/addbookuser?email=' + loggedUser.email)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

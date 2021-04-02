@@ -13,7 +13,7 @@ const ManageBooks = () => {
     }
 
     const handleDelete = (bookid) => {
-        fetch(`http://localhost:5055/delete/${bookid}`, {
+        fetch(`https://powerful-sea-70900.herokuapp.com/delete/${bookid}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -21,7 +21,7 @@ const ManageBooks = () => {
     }
     
     useEffect(() => {
-        fetch('http://localhost:5055/orders')
+        fetch('https://powerful-sea-70900.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setBooks(data))
     }, [])

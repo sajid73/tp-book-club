@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 const Checkout = () => {
     const [booklist, setBooklist] = useState({})
     const { bookid } = useParams();
-    const url = `http://localhost:5055/book/${bookid}`
+    const url = `https://powerful-sea-70900.herokuapp.com/book/${bookid}`
     const [loggedUser, setLoggedUser] = useContext(UserContext);
     const buttonStyle = {
         color: 'darkgreen',
@@ -32,7 +32,7 @@ const Checkout = () => {
         }
         
 
-        fetch('http://localhost:5055/userbook',{
+        fetch('https://powerful-sea-70900.herokuapp.com/userbook',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newBook)

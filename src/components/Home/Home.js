@@ -25,7 +25,7 @@ const Books = () => {
         document.getElementById('spinner').style.display = 'block'
     }
     useEffect(() => {
-        fetch('http://localhost:5055/orders')
+        fetch('https://powerful-sea-70900.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setBooks(data))
     }, [])
