@@ -23,14 +23,29 @@ const Checkout = () => {
     const classes = useStyles();
 
     const addCheckOut = (id) => {
+        const newBook = {
+            title: booklist.title,
+            author: booklist.author,
+            price: booklist.price,
+            imageURL: booklist.imageURL,
+            email: loggedUser.email
+        }
         
+
+        fetch('http://localhost:5055/userbook',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newBook)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
     }
 
 
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setBooklist(data))
     }, [])
     return (
         <div className="d-flex justify-content-md-center m-5">
