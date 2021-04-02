@@ -27,7 +27,8 @@ const ManageBooks = () => {
     }, [])
     return (
         <div>
-            You have: {books.length} books in list
+            <h2 style={{color: 'darkgreen'}}>Manage your shop books</h2>
+            <strong style={{color: 'darkolivegreen'}}>You have: {books.length} books in list</strong>
             {
                 books.map(book => <div style={bookStyle} className="d-flex justify-content-between m-3">
                     <p><b>{book.title}</b> by <i>'{book.author}'</i></p>

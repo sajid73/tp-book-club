@@ -22,13 +22,20 @@ const Checkout = () => {
     }
     const classes = useStyles();
 
+    const time = new Date();
+    const date = time.getDate();
+    const month = time.getMonth();
+    const year = time.getFullYear();
+    const newTime = `${date}/${month}/${year}`;
+
     const addCheckOut = (id) => {
         const newBook = {
             title: booklist.title,
             author: booklist.author,
             price: booklist.price,
             imageURL: booklist.imageURL,
-            email: loggedUser.email
+            email: loggedUser.email,
+            time: newTime
         }
         
 

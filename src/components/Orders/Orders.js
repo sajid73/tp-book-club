@@ -6,12 +6,6 @@ const Orders = () => {
     const [booklist, setBooklist] = useState([])
     const [loggedUser, setLoggedUser] = useContext(UserContext);
 
-    // const buttonStyle = {
-    //     color: 'darkgreen',
-    //     fontWeight: '700',
-    //     padding: '5px'
-    // }
-
     useEffect(() => {
         fetch('https://powerful-sea-70900.herokuapp.com/addbookuser?email=' + loggedUser.email)
             .then(res => res.json())
@@ -36,6 +30,7 @@ const Orders = () => {
                                         </Card.Text>
                                         <div className="d-flex justify-content-between">
                                             <span>${book.price}</span>
+                                            <span>Ordered on : {book.time}</span>
                                         </div>
                                     </Card.Body>
                                 </Card>

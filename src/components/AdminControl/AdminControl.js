@@ -47,6 +47,7 @@ const AdminControl = () => {
     return (
         <div>
             <Container>
+            <h2 style={{color: 'darkgreen'}}>Add a new book</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <label>Book title</label><br />
