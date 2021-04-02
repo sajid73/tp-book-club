@@ -1,0 +1,15 @@
+.navItems {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+}
+.menuItems{
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo{
+    justify-content: left;
+}
